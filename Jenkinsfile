@@ -4,8 +4,7 @@ pipeline {
         stage('Building Resolve Image') {
             steps {   
 		    script{
-			    sh 'cd /home/resolve/Documents/Resolve_v7.2.0.11'
-                	    def imageResult = docker.build("resolve-setu")
+                	    def imageResult = docker.build("resolve-setu", "/home/resolve/Documents/Resolve_v7.2.0.11")
 		    }	
             }
         }
